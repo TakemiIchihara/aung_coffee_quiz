@@ -1,15 +1,18 @@
-import { useMemo } from "react"
+import { useMemo } from 'react'
 
 // <T,> defines that this array could be any types (the comma to tell typescript that its not a JSX el)
-export const useShuffle = <T,>(array: T[]) => {
-
+export const useShuffle = <T,>(
+  array: T[],
+  max?: number,
+  dependency?: number
+) => {
   return useMemo(() => {
     const newArr = [...array]
     // Fisher–Yates algorythm to shuffle
-    for(let i = newArr.length - 1; i > 0; i--){
+    for (let i = newArr.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1))
       ;[newArr[i], newArr[j]] = [newArr[j], newArr[i]]
     }
-    return newArr
-  }, [array])
+    return max ? newArr.splice(0, max) : newArr.splice(0, 15)
+  }, [array, max, dependency])
 }

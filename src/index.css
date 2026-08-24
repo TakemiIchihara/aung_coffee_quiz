@@ -3,5 +3,10 @@
 @import 'tailwindcss';
 
 :root {
-  
+}
+
+@layer component {
+  .button-main {
+    @apply text-2xl shadow-inner;
+  }
 }

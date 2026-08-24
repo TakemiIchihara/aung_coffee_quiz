@@ -1,4 +1,4 @@
-import type { MultipleType } from '../type/quizType'
+import type { MultipleType } from '@/type/quizType'
 
 const opsQuizMaterial = [
   {

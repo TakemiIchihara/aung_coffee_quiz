@@ -1,12 +1,11 @@
 import { useState } from 'react'
 import type { Options } from '../../type/quizType'
-import { quizAnswer } from './Quiz.answer'
 import { useShuffle } from '../../hooks/useShuffle'
 
 type QuizButtonsType = {
   isLong: boolean
   options: Options[]
-  onAnswered: () => void
+  onAnswered: (isCorrect: boolean) => void
 }
 
 export const QuizButtons = ({
@@ -34,13 +33,13 @@ export const QuizButtons = ({
 
         return (
           <div
-            className={`flex h-18 w-full cursor-pointer items-center justify-center rounded-full ${bgColor} text-lg font-semibold`}
+            className={`flex h-18 w-full cursor-pointer items-center justify-center rounded-full ${bgColor} button-main`}
             onClick={() => {
               if (selectedId !== null) return
               setSelectedId(el.id)
               if (!el.isCorrect) {
               }
-              setTimeout(onAnswered, 200)
+              setTimeout(() => onAnswered(el.isCorrect), 200)
             }}
           >
             {el.text}

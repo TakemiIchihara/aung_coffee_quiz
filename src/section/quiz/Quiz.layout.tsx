@@ -1,12 +1,10 @@
-import { useGSAP } from '@gsap/react'
 import type { MultipleType } from '../../type/quizType'
 import { QuizButtons } from './Quiz.button'
-import { useState } from 'react'
 
 type QuizLayoutProps = {
   quizData: MultipleType
   number: number
-  onAnswered: () => void
+  onAnswered: (isCorrect: boolean) => void
   ref: React.Ref<HTMLDivElement | null>
 }
 
