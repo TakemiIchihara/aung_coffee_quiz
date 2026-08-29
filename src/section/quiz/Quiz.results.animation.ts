@@ -6,12 +6,12 @@ export const createResultAnimation = (component: HTMLDivElement) => {
   console.log(component)
   const q = gsap.utils.selector(component)
 
-  const container = q('[data-container]')
-  const tl = gsap.timeline({})
+  // const container = q('[data-container]')
+  // const tl = gsap.timeline({})
 
-  console.log(container)
-  tl.to(component, {
-    autoAlpha: 0,
-    duration: 2,
-  })
+  // console.log(container)
+  // tl.to(component, {
+  //   autoAlpha: 0,
+  //   duration: 2,
+  // })
 }

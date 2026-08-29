@@ -17,7 +17,7 @@ type QuizRunnerProps = {
 
 export const QuizRunner = ({ deck, quizTitle }: QuizRunnerProps) => {
   const [runKey, setRunKey] = useState(0)
-  const quizContent = useShuffle(deck, 3, runKey)
+  const quizContent = useShuffle(deck, 15, runKey)
   const containerRef = useRef<HTMLDivElement>(null)
   const engine = useQuizEngine(quizContent)
 
@@ -80,7 +80,7 @@ export const QuizRunner = ({ deck, quizTitle }: QuizRunnerProps) => {
       ref={containerRef}
     >
       <h1>{quizTitle}</h1>
-      <h2 className="w-full text-center tabular-nums">
+      <h2 className="w-full text-center text-4xl tabular-nums">
         {formatTime(elapsedMs)}
       </h2>
       {/* tabular-nums will give the numbers fixed width preventing the horizontal shifts */}
