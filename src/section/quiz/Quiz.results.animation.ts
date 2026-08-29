@@ -1,10 +1,10 @@
-import { gsap } from 'gsap'
+// import { gsap } from 'gsap'
 
 export const createResultAnimation = (component: HTMLDivElement) => {
   if (!component) return
 
   console.log(component)
-  const q = gsap.utils.selector(component)
+  // const q = gsap.utils.selector(component)
 
   // const container = q('[data-container]')
   // const tl = gsap.timeline({})

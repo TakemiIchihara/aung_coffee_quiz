@@ -40,7 +40,7 @@ export const QuizRunner = ({ deck, quizTitle }: QuizRunnerProps) => {
       gsap.set(quizRefs.current, {
         position: 'absolute',
         autoAlpha: 0,
-        yPercent: 25,
+        yPercent: 28,
       })
       gsap.set(quizRefs.current[0], { autoAlpha: 1, yPercent: 0 })
       start()
