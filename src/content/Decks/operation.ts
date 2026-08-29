@@ -3,7 +3,7 @@ import type { MultipleType } from '@/type/quizType'
 const opsQuizMaterial = [
   {
     question: 'アイスコーヒーの容器は何色？',
-    options: [{ text: 'ベージュ', isCorrect: true }, { text: '黄色' }],
+    options: [{ text: 'グレー', isCorrect: true }, { text: '黄色' }],
     needReview: false,
   },
   {
